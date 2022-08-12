@@ -120,6 +120,16 @@
    numeroRandom()
 
     /* 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true  */
+  
+    const numeroCapi = (numero = undefined) =>{
+  if (numero ===undefined) return console.warn("no ingresaste numero")
+  let numeroAux = numero.toString().split("").reverse().join("")
+  if (numero== numeroAux) return (console.info(`el numero ${numero} es capicua`))
+      else 
+      console.info(`el numero ${numero} no es capicua`)
+
+ }
+  numeroCapi("2122212")
 
 
 
