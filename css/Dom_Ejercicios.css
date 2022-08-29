@@ -133,10 +133,8 @@
 
   .hamburgers {
     font: inherit;
-    display: inline-block;
     overflow: visible;
     margin: 0;
-    padding: 15px;
     cursor: pointer;
     transition-timing-function: linear;
     transition-duration: .15s;
