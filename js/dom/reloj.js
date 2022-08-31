@@ -15,19 +15,25 @@ export function relojDigital(reloj, inireloj,detreloj){
             clearInterval(clockTempo);
             d.querySelector(reloj).innerHTML = null;
             d.querySelector(inireloj).disabled = false;
-
         }
 });
 }
 
 export function alarma(alarma, inialarma,detalarma){
     let soundTempo;
+    const $alarm = d.createElement("audio");
+    $alarm.src = alarma;
     d.addEventListener("click", e=> {
         if(e.target.matches(inialarma)){
-
+            soundTempo=setTimeout(()=>{
+                $alarm.play();
+            },2000);
+            e.target.disabled= true;
         }
         if(e.target.matches(detalarma)){
-
+            $alarm.pause();
+            $alarm.currentTime=0;
+            d.querySelector(inialarma).disabled = false;
         }
 
 
