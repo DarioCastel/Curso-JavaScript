@@ -1,7 +1,7 @@
 /* **********     Curso JavaScript: 80. DOM: Ejercicios Prácticos | Presentación - #jonmircha     ********** */
 import hamburguesaMenu from "./menu_hamburguesa.js";
 import {relojDigital,alarma} from "./dom/reloj.js";
-import { shortcuts } from "./dom/teclado.js";
+import { shortcuts,moveBall } from "./dom/teclado.js";
 
 const d=document
 
@@ -13,4 +13,5 @@ d.addEventListener("DOMContentLoaded",e =>{
 
 d.addEventListener("keydown", (e)=>{
     shortcuts(e);
+    moveBall(e,".ball",".stage")
 })
