@@ -12,8 +12,11 @@ export function moveBall(e, ball, stage){
 switch(e.keyCode){
         case 37: 
         //("left")
+        $ball.style.transform = `rotate(90deg)`
         if(limitBall.left>limitStage.left) {x--;
-        e.preventDefault();}
+        e.preventDefault();
+        }
+        $ball.style.transform = `rotate(${180}deg)`
         break;
         case 38: 
         //("up")
@@ -31,7 +34,8 @@ switch(e.keyCode){
         e.preventDefault();}
         break;
     }
-    $ball.style.transform = `translate(${x*10}px,${y*10}px)`
+    $ball.style.transform = `translate(${x*10}px,${y*10}px)`;
+    
 }
 
 export function shortcuts(e){
