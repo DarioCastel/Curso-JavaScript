@@ -2,13 +2,20 @@
 import hamburguesaMenu from "./menu_hamburguesa.js";
 import {relojDigital,alarma} from "./dom/reloj.js";
 import { shortcuts,moveBall } from "./dom/teclado.js";
-
-const d=document
+import countdown from "./dom/cuenta_regresiva.js";
+import buttontopscroll from "./dom/boton_scroll.js";
+const d=document;
 
 d.addEventListener("DOMContentLoaded",e =>{
     hamburguesaMenu(".panel-btn",".panel",".menu a")
     relojDigital("#reloj","#inireloj","#detreloj")
     alarma("./assets/alarm.mp3","#inialarm","#detalarm")
+    countdown(
+        "countdown",
+        "January 30, 2023 00:00:00",
+        "Feliz cumple pe"
+    );
+    buttontopscroll(".scroll-top-btn")
 })
 
 d.addEventListener("keydown", (e)=>{
