@@ -4,6 +4,7 @@ import {relojDigital,alarma} from "./dom/reloj.js";
 import { shortcuts,moveBall } from "./dom/teclado.js";
 import countdown from "./dom/cuenta_regresiva.js";
 import buttontopscroll from "./dom/boton_scroll.js";
+import darkTheme from "./dom/tema_oscuro.js";
 const d=document;
 
 d.addEventListener("DOMContentLoaded",e =>{
@@ -13,9 +14,10 @@ d.addEventListener("DOMContentLoaded",e =>{
     countdown(
         "countdown",
         "January 30, 2023 00:00:00",
-        "Feliz cumple pe"
+        "Feliz cumple  pe"
     );
-    buttontopscroll(".scroll-top-btn")
+    buttontopscroll(".scroll-top-btn");
+    darkTheme(".dark-theme-btn","dark-mode");
 })
 
 d.addEventListener("keydown", (e)=>{
