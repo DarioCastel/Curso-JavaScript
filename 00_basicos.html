@@ -1213,7 +1213,63 @@
        //Facebook
        !function () {
          console.log('versión Facebook')
-       }(); */
+       }(); 
+       
+       
+       */
+       /*const buscandoAWally = ["carlos","roberto","wally","juan augusto"];
+function buscandoAWallyy(array){
+    let index = array.indexOf("wally")
+    return(`Wally se encuentra en la posicion ${index}`)
+}
+console.log(buscandoAWallyy(buscandoAWally))*/
+
+/*let invitados = {
+  luna:{
+    vegan: false
+  },
+  camila:{
+    vegan: false
+  },
+  luciana:{
+    vegan: false
+  },
+  constanza:{
+    vegan: true
+  }
+}
+let acu=0
+function vegan(invita2){
+  for (const x in invita2) {
+  if(invita2[x].vegan==true) acu+=1
+}
+return acu
+}
+console.log(vegan(invitados))*/
+
+/*function binarie(nume){
+  let mitad=Math.trunc(nume/2),
+  choclo=""
+  for(let i=0;i<mitad;i++){
+    choclo+="10"
+  }
+  if((nume%2)!=0) choclo+="1"
+return choclo
+}
+console.log(binarie(8))*/
+
+const forma= ["2:1","3:1","0:0","1:2"]
+
+function contar(array){
+  let acu=0;
+  array.forEach(x=>{
+    if(x[0]>x[2]) acu+=3;
+    if(x[0]==x[2]) acu+=1;
+  }  )
+  return acu
+}
+console.log(contar(forma))
+
   </script>
 </body>
 
